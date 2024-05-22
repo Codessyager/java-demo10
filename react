@@ -1,0 +1,33 @@
+export function Component() {
+}
+
+
+interface JObj {
+    name: string
+}
+
+// Component<约定属性, 约定状态>
+export default class TsClass extends Component {
+
+    state = {
+        name: 'react'
+    }
+
+    render() {
+        return (
+            <div>
+                TsClass - {this.state.name}
+            <button onClick={() => {
+            this.setState({
+                name: 'typescript react'
+            })
+        }}>onclick</button>
+        </div>
+    )
+    }
+
+    private setState(param: { name: string }) {
+        
+    }
+}
+
